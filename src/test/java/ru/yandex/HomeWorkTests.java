@@ -6,7 +6,7 @@ public class HomeWorkTests {
 
     @Test
     void passTest() {
-        HomeWork.reverse(1112);
+        HomeWork.reverse(1812);
     }
 
     @Test
