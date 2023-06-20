@@ -20,15 +20,11 @@ public class HomeWork {
             value /= 10;
         }
         if (reverse > 1000 && reverse <= 9999) {
-            System.out.println("Ввели 4-ех значное число");
             System.out.println("Число в обратном порядке: " + reverse);
         }
-        // с вводом 1000, получилось только так достичь вывода 1
+        // с вводом 1000 или 0001, получилось только так достичь вывода 1
         else if (reverse == 1) {
-            String reversedNumber = new StringBuilder(String.valueOf(reverse)).reverse().toString();
-            reversedNumber = reversedNumber.replaceAll("^0+", "");
-            System.out.println("Ввели 4-ех значное число");
-            System.out.println("Число в обратном порядке: " + reversedNumber);
+            System.out.println("Число в обратном порядке: " + reverse);
         } else {
             System.out.println("Ввели НЕ 4-ех значное число");
         }
@@ -45,8 +41,8 @@ public class HomeWork {
      * подумать над кейсами
      */
     public static int difference(int value) {
-        // todo
-        // my code
+
+
         return 0;
     }
 
