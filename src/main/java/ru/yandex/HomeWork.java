@@ -11,9 +11,28 @@ public class HomeWork {
      * тесты (подумайте над кейсами)
      * <p>
      * 1000 -> 1 (это называется не значащие нули)
-     * */
+     */
     public static int reverse(int value) {
-        // todo
+        int reverse = 0;
+        while (value != 0) {
+            int remainder = value % 10;
+            reverse = reverse * 10 + remainder;
+            value /= 10;
+        }
+        if (reverse > 1000 && reverse <= 9999) {
+            System.out.println("Ввели 4-ех значное число!");
+            System.out.println("Число в обратном порядке: " + reverse);
+        }
+        // с вводом 1000, получилось только так достичь вывода 1
+        else if (reverse == 1) {
+            String reversedNumber = new StringBuilder(String.valueOf(reverse)).reverse().toString();
+            reversedNumber = reversedNumber.replaceAll("^0+", "");
+            System.out.println("Ввели 4-ех значное число!");
+            System.out.println("Число в обратном порядке: " + reversedNumber);
+        } else {
+            System.out.println("Ввели НЕ 4-ех значное число!");
+        }
+
         return 0;
     }
 
@@ -24,7 +43,7 @@ public class HomeWork {
      * Пример: 4412 -> 44 - 12 = 32
      * Написать полное решение, написать тесты,
      * подумать над кейсами
-     * */
+     */
     public static int difference(int value) {
         // todo
         // my code
