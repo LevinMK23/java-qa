@@ -1,6 +1,13 @@
 package ru.yandex;
 
+import java.util.Arrays;
+
 public class HomeWork {
+
+    public static void main(String[] args) {
+        System.out.println(reverse(1234));
+        System.out.println(difference(4421));
+    }
 
     /**
      * Функция получает на вход 4-х значное число
@@ -14,7 +21,18 @@ public class HomeWork {
      * */
     public static int reverse(int value) {
         // todo
-        return 0;
+//        Прям как в школе учили))) Просто поэксперементировал
+//        int reverseValue = 0;
+//        int a = 1000;
+//        for (int i = 1; i <= 4; i ++) {
+//            reverseValue += (value % 10) * a;
+//            value /= 10;
+//            a /= 10;
+//        }
+//        System.out.print(reverseValue);
+//        return reverseValue;
+
+        return (value % 10) * 1000 + (value / 10 % 10) * 100 + (value / 100 % 10) * 10 + value / 1000;
     }
 
     /**
@@ -28,7 +46,7 @@ public class HomeWork {
     public static int difference(int value) {
         // todo
         // my code
-        return 0;
+        return value / 100 - value % 100;
     }
 
 }
