@@ -1,5 +1,7 @@
 package ru.yandex;
 
+import java.util.List;
+
 public class HomeWork {
 
     /**
@@ -12,9 +14,12 @@ public class HomeWork {
      * <p>
      * 1000 -> 1 (это называется не значащие нули)
      * */
-    public static int reverse(int value) {
+        static int reverse(int value) {
         // todo
-        return 0;
+        int num1 = value / 1000 , num2 = (value / 100) % 10 , num3 = (value / 10) % 10 , num4 = value % 10;
+        int reversedNum = Integer.valueOf(String.valueOf(num4) + String.valueOf(num3) + String.valueOf(num2) + String.valueOf(num1));
+        return reversedNum;
+
     }
 
     /**
@@ -27,8 +32,9 @@ public class HomeWork {
      * */
     public static int difference(int value) {
         // todo
-        // my code
-        return 0;
+        int num1 = value / 100, num2 = value % 100;
+        int result = num1 - num2;
+        return result;
     }
 
 }
