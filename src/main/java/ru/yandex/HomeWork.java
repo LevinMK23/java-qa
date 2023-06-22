@@ -13,9 +13,19 @@ public class HomeWork {
      * 1000 -> 1 (это называется не значащие нули)
      * */
     public static int reverse(int value) {
-        // todo
-        return 0;
+        if (Math.abs(value) < 1000 || Math.abs(value) > 9999)
+            return reverseMessage(value);
+        int reverseValue = ((value % 10) * 1000 + ((value / 10) % 10) * 100 + ((value / 100) % 10) * 10 + (value / 1000));
+        System.out.println(reverseValue);
+        return reverseValue;
     }
+
+     public static int reverseMessage(int value){
+        System.out.println("Введите 4-х значное число");
+         return value;
+     }
+
+
 
     /**
      * Функция должна возвращать разность между
@@ -26,9 +36,16 @@ public class HomeWork {
      * подумать над кейсами
      * */
     public static int difference(int value) {
-        // todo
-        // my code
-        return 0;
+        if (Math.abs(value) < 10 || Math.abs(value) > 9999)
+            return differenceMessage(value);
+        int differenceValue = (value / 100) - (value % 100);
+        System.out.println(differenceValue);
+        return differenceValue;
+    }
+    // Пока не получается кидать ошибку, если вводят отрицательное число
+    public static int differenceMessage(int value){
+        System.out.println("Введите число от 10 до 9999");
+        return value;
     }
 
 }
