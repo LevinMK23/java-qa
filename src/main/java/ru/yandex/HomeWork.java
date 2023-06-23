@@ -14,7 +14,7 @@ public class HomeWork {
      * */
     public static int reverse(int value) {
         // todo
-        int a = 0;
+        int a = 1;
         return 0;
     }
 
