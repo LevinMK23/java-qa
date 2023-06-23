@@ -19,17 +19,7 @@ public class HomeWork {
             reverse = reverse * 10 + remainder;
             value /= 10;
         }
-        if (reverse > 1000 && reverse <= 9999) {
-            System.out.println("Число в обратном порядке: " + reverse);
-        }
-        // с вводом 1000 или 0001, получилось только так достичь вывода 1
-        else if (reverse == 1) {
-            System.out.println("Число в обратном порядке: " + reverse);
-        } else {
-            System.out.println("Ввели НЕ 4-ех значное число");
-        }
-
-        return 0;
+        return reverse;
     }
 
     /**
@@ -41,9 +31,8 @@ public class HomeWork {
      * подумать над кейсами
      */
     public static int difference(int value) {
-
-
-        return 0;
+        int answer = (value / 100) - (value % 100);
+        return answer;
     }
 
 }

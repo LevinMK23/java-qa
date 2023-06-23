@@ -1,41 +1,62 @@
 package ru.yandex;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 public class HomeWorkTests {
 
     @Test
-    void PassTest() {
-        HomeWork.reverse(1356);
+    void passTest() {
+        int actually = HomeWork.reverse(1234);
+        int expected = 4321;
+        Assertions.assertEquals(expected, actually);
     }
 
     @Test
-    void TestInputThousand() {
-        HomeWork.reverse(1000);
+    void test() {
+        int actually = HomeWork.reverse(1000);
+        int expected = 1;
+        Assertions.assertEquals(expected, actually);
     }
 
     @Test
-    void InputMoreFourNumber() {
-        HomeWork.reverse(42354);
-
-    }
-    @Test
-    void InputLessFourNumber() {
-        HomeWork.reverse(423);
+    void test2() {
+        int actually = HomeWork.reverse(0001);
+        int expected = 1;
+        Assertions.assertEquals(expected, actually);
     }
 
     @Test
-    void inputZeroBefore() {
-        HomeWork.reverse(0020);
+    void test3() {
+        int actually = HomeWork.reverse(-1234);
+        int expected = 4321;
+        Assertions.assertEquals(expected, actually);
     }
-
-
-
 
     @Test
-    void Test() {
-        HomeWork.difference(1000);
-
+    void failedTest() {
+        int actually = HomeWork.reverse(4567);
+        int expected = 1234;
+        Assertions.assertEquals(expected, actually);
     }
+
+    @Test
+    void failTest() {
+        int actually = HomeWork.difference(4412);
+        int expected = 32;
+        Assertions.assertEquals(expected, actually);
+    }
+
+    @Test
+    void test4() {
+        int actually = HomeWork.difference(1312);
+        int expected = 10;
+        Assertions.assertEquals(expected,actually);
+    }
+
+
 
 }
+
+
+
