@@ -13,8 +13,9 @@ public class HomeWork {
      * 1000 -> 1 (это называется не значащие нули)
      * */
     public static int reverse(int value) {
-        // todo
-        return 0;
+        int inverted = (value % 10) * 1000 + ((value / 10) % 10) * 100 +
+                ((value / 100) % 10) * 10 + (value / 1000);
+        return inverted;
     }
 
     /**
@@ -26,9 +27,14 @@ public class HomeWork {
      * подумать над кейсами
      * */
     public static int difference(int value) {
-        // todo
-        // my code
-        return 0;
+        int difference = (value / 100) - (value % 100);
+        return difference;
     }
+
+//    public static void main(String[] args) {
+//        System.out.println(reverse(1234));
+//        System.out.println(difference(2211));
+//
+//    }
 
 }
