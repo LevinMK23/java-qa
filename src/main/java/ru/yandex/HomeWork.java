@@ -11,10 +11,15 @@ public class HomeWork {
      * тесты (подумайте над кейсами)
      * <p>
      * 1000 -> 1 (это называется не значащие нули)
-     * */
+     */
     public static int reverse(int value) {
-        // todo
-        return 0;
+        int reverse = 0;
+        while (value != 0) {
+            int remainder = value % 10;
+            reverse = reverse * 10 + remainder;
+            value /= 10;
+        }
+        return reverse;
     }
 
     /**
@@ -24,11 +29,10 @@ public class HomeWork {
      * Пример: 4412 -> 44 - 12 = 32
      * Написать полное решение, написать тесты,
      * подумать над кейсами
-     * */
+     */
     public static int difference(int value) {
-        // todo
-        // my code
-        return 0;
+        int answer = (value / 100) - (value % 100);
+        return answer;
     }
 
 }
