@@ -14,10 +14,11 @@ public class DataTypes {
         // операции с целыми числами
         // + - * / - деление нацело % - остаток от деления
 
-        int x = 135;
+        int x = 1735;
         System.out.println(x % 10);
-        System.out.println(x / 100);
         System.out.println((x / 10) % 10);
+        System.out.println((x/100)%10);
+        System.out.println(x / 1000);
 
         // ++ --
         // ++x;
