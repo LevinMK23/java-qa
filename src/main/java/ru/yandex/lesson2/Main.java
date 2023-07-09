@@ -1,5 +1,7 @@
 package ru.yandex.lesson2;
 
+import ru.yandex.lesson2.homework.*;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -19,6 +21,16 @@ public class Main {
                 .build();
 
         Line line = Line.of(1, 3, 1, 5);
+
+        SerialInventory serialInventory = SerialInventoryBuilder.builder()
+                .withSerialKey(1)
+                .withSku(new Sku(1,1, "sku"))
+                .withLot(new Lot(2,new Sku(2,2,"sku2"), 2))
+                .withLoc(new Loc(3,"loc",3,3,3,3,3,3,"zone"))
+                .withQuantity(4)
+                .build();
+
+        System.out.println(serialInventory);
 
     }
 }
